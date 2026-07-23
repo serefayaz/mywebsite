@@ -1,1 +1,473 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Şeref Ayaz Başıbozuk | Resmî Web Sitesi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#090909;
+color:white;
+transition:.4s;
+}
+
+body.light{
+background:#ffffff;
+color:#111;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80px;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(15px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 60px;
+z-index:999;
+}
+
+body.light header{
+background:rgba(255,255,255,.8);
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:30px;
+font-size:15px;
+transition:.3s;
+}
+
+body.light nav a{
+color:#111;
+}
+
+nav a:hover{
+color:#00bfff;
+}
+
+.themeButton{
+padding:10px 18px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+background:#00bfff;
+color:white;
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+margin-bottom:15px;
+
+animation:fade 1.5s;
+
+}
+
+.hero h2{
+
+font-weight:400;
+
+font-size:22px;
+
+margin-bottom:30px;
+
+color:#dddddd;
+
+}
+
+body.light .hero h2{
+color:#f0f0f0;
+}
+
+.hero button{
+
+padding:18px 35px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:12px;
+
+background:#00bfff;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.hero button:hover{
+
+transform:scale(1.05);
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+section{
+
+padding:120px 12%;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Şeref Ayaz Başıbozuk
+</div>
+
+<nav>
+
+<a href="#anasayfa">Ana Sayfa</a>
+
+<a href="#araclar">Araçlar</a>
+
+<a href="#hakkimda">Hakkımda</a>
+
+<a href="#galeri">Sosyal Galeri</a>
+
+<a href="#iletisim">İletişim</a>
+
+<a href="#sosyal">Sosyal Medya</a>
+
+</nav>
+
+<button class="themeButton" onclick="temaDegistir()">
+
+🌙 / ☀️
+
+</button>
+
+</header>
+
+<section class="hero" id="anasayfa">
+
+<div>
+
+<h1>
+
+Şeref Ayaz Başıbozuk
+
+</h1>
+
+<h2>
+
+Resmî Web Sitesi
+
+<br><br>
+
+Müzisyen • Grafik Tasarımcısı • Girişimci
+
+</h2>
+
+<button onclick="document.getElementById('hakkimda').scrollIntoView({behavior:'smooth'})">
+
+Keşfet
+
+</button>
+
+</div>
+
+</section>
+
+<script>
+
+function temaDegistir(){
+
+document.body.classList.toggle("light");
+
+}
+
+</script>
+
+</body>
+</html><!-- ===================== ARAÇLAR ===================== -->
+
+<section id="araclar">
+
+<h1 style="text-align:center;font-size:45px;margin-bottom:60px;">
+Araçlar
+</h1>
+
+<div style="max-width:900px;margin:auto;background:#151515;padding:40px;border-radius:20px;box-shadow:0 0 30px rgba(0,191,255,.2);">
+
+<h2 style="text-align:center;margin-bottom:25px;">
+Medya Aracı
+</h2>
+
+<p style="text-align:center;color:gray;margin-bottom:35px;">
+Bağlantı veya metin girişi için örnek alan
+</p>
+
+<div style="display:flex;gap:15px;flex-wrap:wrap;justify-content:center;">
+
+<input
+type="text"
+placeholder="Bağlantıyı veya metni buraya giriniz..."
+style="
+flex:1;
+min-width:250px;
+padding:18px;
+border:none;
+border-radius:12px;
+font-size:17px;
+">
+
+<button
+style="
+padding:18px 35px;
+background:#00bfff;
+border:none;
+color:white;
+font-size:17px;
+border-radius:12px;
+cursor:pointer;
+">
+Gönder
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== HAKKIMDA ===================== -->
+
+<section id="hakkimda">
+
+<h1 style="font-size:45px;text-align:center;margin-bottom:40px;">
+Hakkımda
+</h1>
+
+<div style="max-width:1000px;margin:auto;background:#151515;padding:45px;border-radius:20px;line-height:35px;">
+
+<p>
+
+Buraya kendin hakkında istediğin yazıyı ekleyebilirsin.
+
+<br><br>
+
+Örneğin;
+
+<br>
+
+• Kim olduğun
+
+<br>
+
+• Neler yaptığın
+
+<br>
+
+• Başarıların
+
+<br>
+
+• Hedeflerin
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===================== GALERİ ===================== -->
+
+<section id="galeri">
+
+<h1 style="text-align:center;font-size:45px;margin-bottom:50px;">
+Sosyal Galeri
+</h1>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+">
+
+<div style="height:220px;background:#1d1d1d;border-radius:18px;display:flex;justify-content:center;align-items:center;">
+Fotoğraf 1
+</div>
+
+<div style="height:220px;background:#1d1d1d;border-radius:18px;display:flex;justify-content:center;align-items:center;">
+Fotoğraf 2
+</div>
+
+<div style="height:220px;background:#1d1d1d;border-radius:18px;display:flex;justify-content:center;align-items:center;">
+Fotoğraf 3
+</div>
+
+<div style="height:220px;background:#1d1d1d;border-radius:18px;display:flex;justify-content:center;align-items:center;">
+Fotoğraf 4
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== İLETİŞİM ===================== -->
+
+<section id="iletisim">
+
+<h1 style="text-align:center;font-size:45px;margin-bottom:50px;">
+İletişim Bilgileri
+</h1>
+
+<div style="
+max-width:700px;
+margin:auto;
+background:#151515;
+padding:45px;
+border-radius:20px;
+line-height:40px;
+">
+
+<b>E-Posta</b>
+
+<br>
+
+mail@example.com
+
+<br><br>
+
+<b>Telefon</b>
+
+<br>
+
++90 XXX XXX XX XX
+
+<br><br>
+
+<b>Konum</b>
+
+<br>
+
+Türkiye
+
+</div>
+
+</section>
+
+<!-- ===================== SOSYAL MEDYA ===================== -->
+
+<section id="sosyal">
+
+<h1 style="text-align:center;font-size:45px;margin-bottom:50px;">
+Sosyal Medya
+</h1>
+
+<div style="
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+">
+
+<a href="https://instagram.com/serefayazoffical_" target="_blank"
+style="padding:20px 35px;background:#E1306C;color:white;text-decoration:none;border-radius:12px;">
+Instagram
+</a>
+
+<a href="#"
+style="padding:20px 35px;background:#ff0000;color:white;text-decoration:none;border-radius:12px;">
+YouTube
+</a>
+
+<a href="#"
+style="padding:20px 35px;background:#1877F2;color:white;text-decoration:none;border-radius:12px;">
+Facebook
+</a>
+
+</div>
+
+</section>
+<footer style="
+background:#111;
+padding:40px;
+text-align:center;
+margin-top:80px;
+color:#888;
+">
+
+<p>© 2026 Şeref Ayaz Başıbozuk</p>
+
+<p>
+Tüm Hakları Saklıdır.
+</p>
+
+</footer>
+
+</body>
+</html>
